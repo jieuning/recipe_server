@@ -52,7 +52,6 @@ app.get("/api/recipe", async (req, res) => {
 
 app.get("/api/base/detail", async (req, res) => {
   const id = req.query.id;
-  console.log(id);
   const apiUrl = `http://211.237.50.150:7080/openapi/${process.env.API_KEY}/json/Grid_20150827000000000226_1?RECIPE_ID=${id}`;
 
   try {
@@ -106,7 +105,6 @@ app.get("/api/base/pagination", async (req, res) => {
 
 app.get("/api/ingredient/id", async (req, res) => {
   const ingredient = req.query.ingredient;
-  console.log(ingredient);
   const apiUrl = `http://211.237.50.150:7080/openapi/${process.env.API_KEY}/json/Grid_20150827000000000227_1?IRDNT_NM=${ingredient}`;
 
   try {
