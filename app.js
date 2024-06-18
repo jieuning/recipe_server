@@ -104,10 +104,6 @@ app.post("/api/base/pagination", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
-
 app.get("/api/ingredient/id", async (req, res) => {
   const ingredient = req.query.ingredient;
   console.log(ingredient);
@@ -121,3 +117,9 @@ app.get("/api/ingredient/id", async (req, res) => {
     console.error("에러", error.message);
   }
 });
+
+app.listen(port, () => {
+  console.log(`server on port ${port}`);
+});
+
+module.exports = app;
