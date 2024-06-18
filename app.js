@@ -90,8 +90,8 @@ app.get("/api/recipe/detail", async (req, res) => {
   }
 });
 
-app.post("/api/base/pagination", async (req, res) => {
-  const { page = 1 } = req.body;
+app.get("/api/base/pagination", async (req, res) => {
+  const { page = 1 } = req.query;
   const apiUrl = `http://211.237.50.150:7080/openapi/${process.env.API_KEY}/json/Grid_20150827000000000226_1/1/${page}0`;
 
   try {
